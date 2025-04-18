@@ -7,6 +7,7 @@ public class KassenSystemManager {
 
     private Set<Benutzer> benutzers = new HashSet<>();
     private Kasse kasse = new Kasse();
+    private Korb korb;
 
 
 }

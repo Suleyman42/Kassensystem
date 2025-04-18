@@ -57,12 +57,14 @@ public class Korb {
         this.menge = menge;
     }
 
-    private void entfernen(Produkt produkt){
+    private void entfernen(Produkt produkt,double menge){
 
         if (!produkts.isEmpty()){
             produkts.remove(produkt);
 
         }
+
+
 
     }
 
