@@ -13,7 +13,7 @@ public class Korb {
     // kodiere untere felder in Benutzer
 
     private List<Map<Produkt, KorbEintrag>> verkaufteProdukte;
-    private  Map<Produkt, KorbEintrag> produkts = new LinkedHashMap<>();
+    private  Map<Produkt, KorbEintrag> produkts;
     private double menge = 1;
 
 

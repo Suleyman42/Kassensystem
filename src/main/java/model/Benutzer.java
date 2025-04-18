@@ -19,34 +19,32 @@ public class Benutzer {
     private boolean inPause;
     private LocalDateTime schichtBeginn;
     private LocalDateTime pauseBeginn;
-    private Map<Produkt, List<KorbEintrag>> verkaufProdukt;
+    private List<Map<Produkt,KorbEintrag>> gesamteVerkauftsProdukt;
 
-    public Benutzer(int id,Map<Produkt, List<KorbEintrag>> verkaufProdukt){
+    public Benutzer(int id){
         this.id = id;
-        this.verkaufProdukt = verkaufProdukt;
+
     }
 
-    public Benutzer(int id, Rolle rolle, String vorname, String nachname, String benutzername, String passwortHash,
-                    boolean arbeitet, boolean inPause, LocalDateTime schichtBeginn, LocalDateTime pauseBeginn, Map<Produkt, List<KorbEintrag>> verkaufProdukt) {
+    public Benutzer(int id, Rolle rolle, String vorname, String nachname, String benutzername, String passwortHash
+                   ) {
         this.id = id;
         this.rolle = rolle;
         this.vorname = vorname;
         this.nachname = nachname;
         this.benutzername = benutzername;
         this.passwortHash = passwortHash;
-        this.arbeitet = arbeitet;
-        this.inPause = inPause;
-        this.schichtBeginn = schichtBeginn;
-        this.pauseBeginn = pauseBeginn;
-        this.verkaufProdukt = verkaufProdukt;
+
     }
 
-    public Map<Produkt, List<KorbEintrag>> getVerkaufProdukt() {
-        return verkaufProdukt;
+
+
+    public List<Map<Produkt,KorbEintrag>> getGesamteVerkauftsProdukt() {
+        return gesamteVerkauftsProdukt;
     }
 
-    public void setVerkaufProdukt(Map<Produkt, List<KorbEintrag>> verkaufProdukt) {
-        this.verkaufProdukt = verkaufProdukt;
+    public void setGesamteVerkauftsProdukt(List<Map<Produkt,KorbEintrag>> gesamteVerkauftsProdukt) {
+        this.gesamteVerkauftsProdukt = gesamteVerkauftsProdukt;
     }
 
     public int getId() {
